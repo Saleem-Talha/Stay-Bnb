@@ -1,0 +1,16 @@
+<div class="pagination">
+    <img src="./images/arrow.png" alt="">
+    <span id="span1">1</span>
+    <span id="span2">2</span>
+    <span id="span3">3</span>
+    <span id="span3">4</span>
+    <span id="span3">5</span>
+    <span id="span3">6</span>
+    <span id="span3">7</span>
+    <span id="span3">8</span>
+    <span id="span3">9</span>
+    <span id="span3">10</span>
+    <span id="span3">11</span>
+    <span id="span3">12</span>
+    <img src="./images/arrow.png" alt="" class="right-arrow">
+</div>

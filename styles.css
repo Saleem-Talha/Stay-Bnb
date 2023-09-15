@@ -1,0 +1,1277 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./images/banner-3);
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Add the hover animation to the navigation links */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: #ff5361;
+}
+
+/* Create the ::before pseudo-element for the hover animation */
+.nav-links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff5361;
+  transition: width 0.3s ease; /* Add transition for background-color */
+}
+
+/* Define the hover animation */
+.nav-links li a:hover::before {
+  width: 100%;
+}
+
+/* Reset the ::before pseudo-element for all other links */
+.nav-links li a:not(:hover)::before {
+  width: 0; /* Reset width for non-hovered links */
+}
+
+.register-btn {
+  background: white;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color color 0.5s;
+}
+
+.container {
+  padding: 0 7%;
+}
+
+.container h1 {
+  font-size: 4vw;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding-top: 22%;
+}
+
+.search-bar {
+  background: white;
+  width: 70%;
+  margin: 30px auto;
+  padding: 6px 10px 6px 30px;
+  border-radius: 50px;
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-bar form input {
+  display: block;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.location-input label {
+  display: block; /* Make the label a block element to place it on a new line */
+}
+
+.location-input select {
+  display: block; /* Make the select a block element to place it on a new line */
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.search-bar form a {
+  background: #ff5361;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-bar form a img {
+  width: 15px;
+  margin-top: 18px;
+  margin-left: 18px;
+}
+
+.location-input {
+  flex: 1;
+}
+
+.search-bar form label {
+  font-weight: 600;
+}
+
+/*---------------------exclusives--------------------*/
+
+.subtitle {
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #333;
+}
+
+.exclusives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+
+.exclusives div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.exclusives div {
+  position: relative;
+}
+
+.exclusives div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+/*---------------------trending--------------------*/
+
+.trending {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.trending div {
+  text-align: left;
+}
+
+.trending div img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.trending h3 {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #4b4a4a;
+}
+
+/*---------------------cta--------------------*/
+
+.cta {
+  margin: 80px 0;
+  background-image: linear-gradient(to right, #3f2321, transparent),
+    url(images/banner-2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 5%;
+  color: white;
+}
+
+.cta h3 {
+  font-size: 4vw;
+  line-height: 5.3vw;
+  font-weight: 500;
+}
+
+.cta p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.cta-btn {
+  background: #ff5361;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/*---------------------stories--------------------*/
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.stories div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.stories div {
+  position: relative;
+  text-align: center;
+}
+
+.stories div p {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 23px;
+}
+
+.start-btn {
+  text-decoration: none;
+  background: #ff5361;
+  width: 80%;
+  color: white;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+/*---------------------about--------------------*/
+.about-msg {
+  text-align: center;
+  margin: 80px 0;
+  color: #333;
+  font-size: 17px;
+}
+
+.about-msg h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/*---------------------footer--------------------*/
+
+.footer {
+  margin: 80px 0 10px;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #999;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+.footer hr {
+  background: #999;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  margin: 20px 0;
+}
+
+.footer p {
+  padding-bottom: 15px;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  background: white;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -12px;
+  border-radius: 2px;
+}
+
+.fa-solid.fa-bars {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  /* Default styles for navigation links */
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+  }
+
+  /* Hover color change */
+  .nav-links li a:hover {
+    color: white;
+  }
+
+  /* Create the ::before pseudo-element for the hover animation */
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff5361;
+    transition: width 0.3s ease;
+  }
+
+  /* Define the hover animation */
+  .nav-links li a:hover::before {
+    width: 100%;
+  }
+
+  /* Reset the ::before pseudo-element for all other links */
+  .nav-links li a:not(:hover)::before {
+    width: 0;
+  }
+
+  .logo {
+    position: fixed;
+    top: 4%;
+    left: 7%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 7% 0;
+    background: #ff5361;
+    text-align: right;
+
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+
+  nav .nav-links li {
+    margin: 10px 0;
+    display: block;
+  }
+
+  .register-btn {
+    margin: 15px 0 30px;
+    display: inline-block;
+    border: 1px solid #fff;
+  }
+
+  .fa-solid.fa-bars {
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 7%;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .active::after {
+    left: -40px;
+    transform: translate(0, 50%);
+    bottom: 50%;
+  }
+
+  .hide-menu {
+    max-height: 300px;
+  }
+
+  .header h1 {
+    padding-top: 200px;
+    font-size: 7vw;
+  }
+
+  .search-bar {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px 10px 30px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .search-bar form {
+    display: block;
+  }
+
+  .search-bar form input {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .search-bar form a {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  .subtitle {
+    font-size: 6vw;
+  }
+
+  .cta {
+    padding: 15% 5%;
+  }
+
+  .cta h3 {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+
+  .cta p {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    padding: 6px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .stories p {
+    font-size: 22px;
+  }
+
+  .about-msg {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+.register-btn:hover {
+  color: white;
+  background-color: #ff5361;
+  transition: background-color 0.5s;
+}
+
+.search-bar form a:hover {
+  background: #fc7580;
+}
+
+.cta-btn:hover {
+  background: #fc7580;
+}
+
+.start-btn:hover {
+  background: #fc7580;
+}
+
+.footer a i:hover {
+  color: #fc7580;
+}
+
+/* CSS for the zoom-in effect */
+.exclusives div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.exclusives img {
+  transition: transform 0.3s;
+}
+
+.exclusives div:hover img {
+  transform: scale(1.1);
+}
+
+.trending div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.trending img {
+  transition: transform 0.3s;
+}
+
+.trending div:hover img {
+  transform: scale(1.1);
+}
+
+.stories div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.stories img {
+  transition: transform 0.3s;
+}
+
+.stories div:hover img {
+  transform: scale(1.1);
+}
+
+/*---------------------Listing Page--------------------*/
+
+.navbar-white {
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-white .nav-links li a {
+  color: black;
+}
+
+.navbar-white .register-btn {
+  background-color: #ff5361;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+.navbar-white .register-btn:hover {
+  background-color: white;
+  color: #ff5361;
+  border: 1px solid #ff5361;
+}
+
+.navbar-white .fa-solid.fa-bars {
+  color: #ff5361;
+}
+
+.navbar-white .active::after {
+  background: #ff5361;
+}
+
+.list-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.london-col,
+.switzerland-col,
+.australia-col,
+.greece-col,
+.amsterdam-col,
+.netherlands-col,
+.new-york-col,
+.chicago-col,
+.san-francisco-col,
+.shanghai-col,
+.islamabad-col,
+.paris-col,
+.dubai-col {
+  flex-basis: 70%;
+  display: none;
+  cursor: pointer;
+}
+.left-col-2 {
+  flex-basis: 70%;
+  display: none;
+}
+
+.right-col {
+  flex-basis: 25%;
+}
+
+.london-col h1,
+.switzerland-col h1,
+.australia-col h1,
+.greece-col h1,
+.amsterdam-col h1,
+.netherlands-col h1,
+.new-york-col h1,
+.chicago-col h1,
+.san-francisco-col h1,
+.shanghai-col h1,
+.islamabad-col h1,
+.paris-col h1,
+.dubai-col h1 {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding-top: 0;
+  text-align: left;
+  font-size: 28px;
+}
+.left-col-2 h1 {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding-top: 0;
+  text-align: left;
+  font-size: 28px;
+}
+
+.house {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+.house-img {
+  flex-basis: 40%;
+}
+
+.house-info {
+  flex-basis: 48%;
+  color: #555;
+}
+
+.house-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.house-info h3 {
+  font-weight: 500;
+  color: #333;
+  font-size: 22px;
+  margin: 4px 0;
+}
+
+.house-info i {
+  color: #ff5361;
+  font-size: 18px;
+  margin-right: 10px 1px;
+}
+
+.house-price {
+  text-align: right;
+}
+
+.house-price h4 {
+  font-size: 20px;
+}
+
+.house-price h4 span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.side-bar {
+  border: 1px solid #999;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+
+.side-bar h2 {
+  font-weight: 500;
+}
+
+.side-bar h3 {
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.filter p {
+  flex: 1;
+}
+
+.filter input {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.sidebar-link {
+  text-align: right;
+  margin: 20px 0;
+}
+
+.sidebar-link a {
+  text-decoration: none;
+}
+
+.sidebar-link a:hover {
+  color: #ff5361;
+}
+
+.filter2 {
+  display: flex;
+  align-items: center;
+  color: #555;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.filter2 p {
+  flex: 1;
+}
+
+.filter2 input {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.filter2-h3 {
+  display: none;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.pagination img {
+  width: 15px;
+  margin: 10px 20px;
+}
+
+.pagination span {
+  margin: 10px 8px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: rgb(156, 156, 156);
+}
+
+.pagination span:hover {
+  color: #ff5361;
+}
+
+.pagination span #span {
+  color: black;
+}
+
+.right-arrow {
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 700px) {
+  .list-container {
+    margin-top: 150px;
+  }
+
+  .london-col,
+  .switzerland-col,
+  .australia-col,
+  .greece-col,
+  .amsterdam-col,
+  .netherlands-col,
+  .new-york-col,
+  .chicago-col,
+  .san-francisco-col,
+  .shanghai-col,
+  .islamabad-col,
+  .paris-col,
+  .dubai-col,
+  .left-col-2,
+  .right-col,
+  .house-img,
+  .house-info {
+    flex-basis: 100%;
+  }
+
+  .london-col h1,
+  .switzerland-col h1,
+  .australia-col h1,
+  .greece-col h1,
+  .amsterdam-col h1,
+  .netherlands-col h1,
+  .new-york-col h1,
+  .chicago-col h1,
+  .san-francisco-col h1,
+  .shanghai-col h1,
+  .islamabad-col h1,
+  .paris-col h1,
+  .dubai-col h1,
+  .left-col-2 h1 {
+    font-size: 22px;
+  }
+  .house-info h3 {
+    font-size: 18px;
+  }
+
+  .house-info i {
+    font-size: 16px;
+  }
+
+  .pagination span {
+    font-size: 12px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.house-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.house-img img {
+  transition: transform 0.3s;
+}
+
+.house:hover .house-img img {
+  transform: scale(1.1);
+}
+
+/* Initially set the house listings to 70% flex basis */
+.house {
+  flex-basis: 70%;
+  display: none;
+}
+
+/* Show the house listings that match the filter */
+.house.show {
+  display: flex;
+  flex-basis: 70%;
+}
+
+.house-details-1,
+.house-details-2,
+.house-details-3,
+.house-details-4,
+.house-details-5 {
+  padding: 0 12%;
+}
+
+.house-title {
+  margin-top: 50px;
+}
+
+.house-title h1 {
+  font-weight: 500;
+}
+
+.house-title .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.house-title span {
+  margin: 0 20px;
+}
+
+.house-title i {
+  color: #ff5361;
+  font-size: 14px;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  margin: 20px 0;
+  grid-template-areas: "first first . ." "first first . .";
+}
+
+.gallery div img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallery-img-1 {
+  grid-area: first;
+}
+
+.small-details h2 {
+  font-weight: 500;
+}
+
+.small-details h4 {
+  text-align: right;
+  font-size: 22px;
+}
+
+.line {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0 50px;
+}
+
+.check-form {
+  margin: 30px 0;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.check-form label {
+  display: block;
+  text-align: left;
+}
+
+.check-form div {
+  padding: 20px;
+}
+
+.check-form input {
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.check-form button {
+  background: #ff5361;
+  border: 0;
+  outline: none;
+  color: white;
+  padding: 18px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.guest-field {
+  display: flex;
+  flex-direction: column; /* Display label and input in a column */
+  align-items: flex-start;
+  flex: 1; /* Align items to the left */
+}
+
+.guest-field label {
+  text-align: left;
+  margin-bottom: 5px; /* Add some space between label and input */
+}
+
+.guest-field input {
+  text-align: left;
+}
+
+.details-list {
+  list-style: none;
+  margin: 50px 0;
+}
+
+.details-list li {
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #555;
+  position: relative;
+}
+
+.details-list li span {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.details-list li i {
+  position: absolute;
+  top: 5px;
+  left: -40px;
+  color: #ff5361;
+}
+
+.home-desc {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.map {
+  margin: 50px 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.map h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.map b {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.weather h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.weather {
+  align-items: center;
+  justify-content: center;
+  max-height: 380px;
+}
+
+.weather-status-1,
+.weather-status-2,
+.weather-status-3,
+.weather-status-4,
+.weather-status-5 {
+  display: block;
+  align-items: center;
+}
+
+.weather-status-1.city-1,
+.weather-status-1.humidity-1,
+.weather-status-1.wind-1,
+.weather-status-1.temp-1,
+.weather-status-1.weather-type-1,
+.weather-status-2.city-2,
+.weather-status-2.humidity-2,
+.weather-status-2.wind-2,
+.weather-status-2.temp-2,
+.weather-status-2.weather-type-2,
+.weather-status-3.city-3,
+.weather-status-3.humidity-3,
+.weather-status-3.wind-3,
+.weather-status-3.temp-3,
+.weather-status-3.weather-type-3,
+.weather-status-4.city-4,
+.weather-status-4.humidity-4,
+.weather-status-4.wind-4,
+.weather-status-4.temp-4,
+.weather-status-4.weather-type-4,
+.weather-status-5.city-5,
+.weather-status-5.humidity-5,
+.weather-status-5.wind-5,
+.weather-status-5.temp-5,
+.weather-status-5.weather-type-5 {
+  margin: 10px 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.city-1,
+.wind-1,
+.temp-1,
+.humidity-1,
+.weather-type-1,
+.city-2,
+.wind-2,
+.temp-2,
+.humidity-2,
+.weather-type-2,
+.city-3,
+.wind-3,
+.temp-3,
+.humidity-3,
+.weather-type-3,
+.city-4,
+.wind-4,
+.temp-4,
+.humidity-4,
+.weather-type-4,
+.city-5,
+.wind-5,
+.temp-5,
+.humidity-5,
+.weather-type-5 {
+  color: #ff5361;
+  font-weight: 500;
+}
+
+.div-2 {
+  display: flex;
+}
+
+.para-div {
+  flex-basis: 60%;
+}
+
+.weather {
+  flex-basis: 35%;
+  margin-left: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
+
+.weather:hover {
+  background-color: #f5f5f5;
+}
+
+.weather-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.weather-img img {
+  width: 100px;
+}
+
+.weather-info-1,
+.weather-info-2,
+.weather-info-3,
+.weather-info-4,
+.weather-info-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.weather-info-1 p,
+.weather-info-2 p,
+.weather-info-3 p,
+.weather-info-4 p,
+.weather-info-5 p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .weather-status-1,
+  .weather-status-2,
+  .weather-status-3,
+  .weather-status-4,
+  .weather-status-5 {
+    flex-direction: column;
+  }
+
+  .div-2 {
+    flex-direction: column;
+  }
+
+  .weather {
+    justify-content: center;
+    align-self: center;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .house-details-1,
+  .house-details-2,
+  .house-details-3,
+  .house-details-4,
+  .house-details-5 {
+    margin-top: 150px;
+  }
+
+  .weather-status-1,
+  .weather-status-2,
+  .weather-status-3,
+  .weather-status-4,
+  .weather-status-5 {
+    flex-direction: column;
+  }
+
+  .div-2 {
+    flex-direction: column;
+  }
+
+  .weather {
+    justify-content: center;
+    align-self: center;
+    margin-left: 0;
+  }
+
+  .row {
+    margin-top: 10px;
+  }
+
+  .gallery {
+    grid-template-areas: "first first" ". ." ". .";
+  }
+
+  .small-details h2 {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+
+  .small-details h4 {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
+.small-details h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.small-details h4 span {
+  font-size: 20px;
+  font-weight: 500;
+}
